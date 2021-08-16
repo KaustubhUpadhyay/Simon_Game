@@ -50,7 +50,12 @@ body {
 .yellow {
   background-color: rgb(201, 201, 47);
 }
-
+.start{
+    background: url("restart.jfif");
+    background-size : cover ;
+    background-color: #cccccc;
+    background-position: center;
+}
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
