@@ -20,7 +20,7 @@ $(".btn").click(function(){
         restart();
     }
 
-    var audio = new Audio("sounds/"+sid+".mp3");
+    var audio = new Audio(sid+".mp3");
     audio.play();
     
     if(btnpress == level){
@@ -52,7 +52,7 @@ function myLoop() {
         var ran = Math.floor(Math.random() * 4) + 1;
         press.push(ran);
 
-        var audio = new Audio("sounds/"+ran+".mp3");
+        var audio = new Audio(ran+".mp3");
         audio.play();
         animate(ran);
                                                     
@@ -82,7 +82,7 @@ function check(){
         start();
     }
     else{
-        var audio = new Audio("sounds/wrong.mp3");
+        var audio = new Audio("wrong.mp3");
         audio.play();
         $("#level-title").text("Game Over");
 
