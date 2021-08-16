@@ -17,7 +17,11 @@ $(".btn").click(function(){
     btnarr.push(sid);
 
     if(sid == "5"){
-        restart();
+        var audio = new Audio("restart.mp3");
+        audio.play();
+        setTimeout(function(){
+            restart();
+        },2000);
     }
 
     var audio = new Audio(sid+".mp3");
