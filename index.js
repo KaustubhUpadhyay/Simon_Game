@@ -16,6 +16,10 @@ $(".btn").click(function(){
     btnpress++;
     btnarr.push(sid);
 
+    if(sid == "5"){
+        restart();
+    }
+
     var audio = new Audio("sounds/"+sid+".mp3");
     audio.play();
     
@@ -81,6 +85,8 @@ function check(){
         var audio = new Audio("sounds/wrong.mp3");
         audio.play();
         $("#level-title").text("Game Over");
+
+        
     }
 }
 
@@ -91,3 +97,11 @@ function animate(ran){
         $("#"+ran).removeClass("pressed");
     },100);
 }   
+
+function restart(){
+    level = 1;
+    press = [];
+    btnarr = [];
+    btnpress = 0;
+    start();
+}
